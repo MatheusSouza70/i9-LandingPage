@@ -1,0 +1,61 @@
+@import "../../../color-variables.scss";
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2; /* Permite que a seção central ocupe mais espaço */
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.center-content img {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    flex: 1;
+    justify-content: flex-end; /* Mantém a navegação à direita */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #c00;
+}
+
+button {
+    background: none;
+    border: none;
+    color: $primary-text;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
