@@ -1,51 +1,122 @@
 @import "../../../color-variables.scss";
+.sobre-acic {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
 
-.sobre {
-    font-family: Arial, sans-serif;
-    color: $primary-text;
-    background-color: #ffff;
-    padding: 2rem;
-    
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-      
-      h1 {
-        color: $primary-color;
-      }
+  .header {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      color: $primary-text;
     }
-  
-    section {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background-color: lighten($bg-secondary, 10%);
-      border-radius: 8px;
-      
-      h2 {
-        color: $secondary-color;
-      }
-  
-      p {
-        line-height: 1.6;
-      }
-  
-      ul {
-        list-style-type: disc;
-        padding-left: 1.5rem;
-  
-        li {
-          margin-bottom: 0.5rem;
+
+    p {
+      font-size: 1rem;
+      color: $secondary-text;
+    }
+
+    .icon-building {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url('/assets/icons/building.svg') no-repeat center center;
+      background-size: contain;
+      margin: 0 10px;
+    }
+  }
+
+  .feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+
+    .text-content {
+      max-width: 50%;
+
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-text;
+
+        span {
+          color: $primary-color;
+          font-weight: bold;
         }
       }
-  
-      a {
-        color: $primary-color;
-        text-decoration: none;
-        
+
+      p {
+        color: $secondary-text;
+        margin: 1rem 0;
+      }
+
+      .button {
+        padding: 0.75rem 1.5rem;
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
         &:hover {
-          text-decoration: underline;
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .image-content {
+      max-width: 45%;
+      text-align: right;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .sobre-acic-info {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    .card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 30%;
+
+      h3 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: $secondary-text;
+        margin-bottom: 1rem;
+      }
+
+      .button {
+        padding: 0.5rem 1rem;
+        background-color: $secondary-color;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($secondary-color, 10%);
         }
       }
     }
   }
-  
+}

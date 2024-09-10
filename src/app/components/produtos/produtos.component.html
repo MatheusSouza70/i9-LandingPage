@@ -1,18 +1,49 @@
 <app-header></app-header>
-<div class="produtos">
-    <header>
-      <h1>Nossos Produtos</h1>
-    </header>
-  
-    <section class="cards">
-      <div class="card" *ngForm="let produto of produtos">
-        <img [src]="produto.imagem" alt="{{ produto.nome }}" class="card-img" />
-        <div class="card-content">
-          <h2 class="card-title">{{ produto.nome }}</h2>
-          <p class="card-description">{{ produto.descricao }}</p>
-          <p class="card-preco">{{ produto.preco }}</p>
-        </div>
-      </div>
-    </section>
-  </div>
+<section class="produtos-page">
+  <!-- Barra Lateral de Categorias -->
+  <aside class="sidebar">
+    <h3>Máquinas</h3>
+    <ul class="categories">
+      <li class="category-title">Toolbox</li>
+      <li (click)="filtrarProdutos('calotas')">Máquina 1</li>
+      <li (click)="filtrarProdutos('pneus')">Máquina 2</li>
+      <li (click)="filtrarProdutos('rodas')">Máquina 3</li>
 
+      <li class="category-title">Express</li>
+      <li (click)="filtrarProdutos('express-toolbox')">Máquina 4</li>
+      <li (click)="filtrarProdutos('fiat')">Máquina 5</li>
+      <li (click)="filtrarProdutos('ford')">Máquina 6</li>
+      <li (click)="filtrarProdutos('honda')">Máquina 7</li>
+
+      <li class="category-title">Outros</li>
+      <li (click)="filtrarProdutos('206')">Outra 1</li>
+      <li (click)="filtrarProdutos('207')">Outra 2</li>
+      <li (click)="filtrarProdutos('208')">Outra 3</li>
+    </ul>
+  </aside>
+
+  <!-- Listagem de Produtos -->
+  <div class="product-list">
+    <header class="product-header">
+      <h2>Nossos Produtos</h2>
+      <p>{{ produtosFiltrados.length }} Produtos</p>
+      <div>
+        <button (click)="filtrarProdutos('all')">Todos</button>
+        <button (click)="filtrarProdutos('drawer')">Teste 1</button>
+        <button (click)="filtrarProdutos('security')">Teste 2</button>
+      </div>
+    </header>
+
+    <div class="products">
+      <div *ngFor="let produto of produtosFiltrados" class="product-card">
+        <div class="discount-badge">{{ produto.desconto }} OFF</div>
+        <img [src]="produto.imagem" [alt]="produto.nome" width="250" height="250" />
+        <h3>{{ produto.nome }}</h3>
+        <p class="price-before">De: {{ produto.precoOriginal | currency }}</p>
+        <p class="price-now">Por: {{ produto.precoAtual | currency }}</p>
+        <button class="buy-button">Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
