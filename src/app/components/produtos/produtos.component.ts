@@ -11,6 +11,7 @@ interface Produto {
   precoAtual: number;
   desconto: string;
   categoria: string[];
+  descricao?: string;
 }
 
 
@@ -30,6 +31,7 @@ export class ProdutosComponent {
       precoAtual: 1900.0,
       desconto: '5%',
       categoria: ['hardware', 'drawer'],
+      descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.'
     },
     {
       nome: 'AccuCab',
@@ -38,6 +40,7 @@ export class ProdutosComponent {
       precoAtual: 3400.0,
       desconto: '3%',
       categoria: ['hardware', 'cabinet'],
+      descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.'
     },
     {
       nome: 'Express Locker',
@@ -46,6 +49,7 @@ export class ProdutosComponent {
       precoAtual: 2400.0,
       desconto: '4%',
       categoria: ['hardware', 'locker', 'express'],
+      descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.'
     },
     {
       nome: 'ProLock',
@@ -54,7 +58,8 @@ export class ProdutosComponent {
       precoAtual: 3800.0,
       desconto: '5%',
       categoria: ['hardware', 'security'],
-    },
+      descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.'
+    }
   ];
   produtosFiltrados: Produto[] = [...this.produtos];
 
@@ -69,4 +74,14 @@ export class ProdutosComponent {
       );
     }
   }
+
+  produtoSelecionado: Produto | null = null;
+
+abrirModal(produto: Produto): void {
+  this.produtoSelecionado = produto;
+}
+
+fecharModal(): void {
+  this.produtoSelecionado = null;
+}
 }
