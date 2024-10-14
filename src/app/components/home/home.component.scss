@@ -20,11 +20,12 @@ main {
         font-weight: 700;
         color: $secondary-text;
     }
-    
+
     h1 {
         font-size: 36px;
         font-weight: 900;
         color: $primary-text;
+        text-align: center;
     }
 
     img {
@@ -38,27 +39,27 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 40px;
+    padding: 20px;
 
     .benefit-data {
         border-bottom: 10px solid $secondary-color;
         padding-bottom: 20px;
 
         h2 {
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 600;
             font-family: "Roboto", sans-serif;
             color: $primary-text;
+            text-align: center;
         }
     }
 
     p {
-        font-size: 24px;
+        font-size: 18px;
         font-style: italic;
         font-weight: 300;
-
-        
+        text-align: center;
     }
 }
 
@@ -67,110 +68,139 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
 
     h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 36px;
+        font-size: 24px;
         color: $primary-text;
-        margin: 0;
         text-align: center;
         margin-bottom: 20px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 667px) {
     .main-section {
         flex-direction: row;
         span {
             font-size: 20px;
         }
         h1 {
-            font-size: 72px;
+            font-size: 48px;
         }
     }
 
     .benefit-section {
         flex-direction: row;
+        align-items: flex-start;
+
         .benefit-data h2 {
-            font-size: 60px;
-        }
-        p {
             font-size: 40px;
+        }
+
+        p {
+            font-size: 22px;
         }
     }
 
     .cta-section h2 {
-        font-size: 60px;
+        font-size: 36px;
     }
 }
 
 .reviews-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px; 
-    flex-wrap: nowrap; 
     padding: 20px;
-  }
+    justify-content: center;
+}
 
 .review-card {
-    flex: 1 1 30%;
+    flex: 1 1 300px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 30%;
-    margin: 20px auto;
+    max-width: 100%;
     font-family: Arial, sans-serif;
-  
+    margin: 10px;
+
     .review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-  
-      .profile-picture {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 15px;
-      }
-  
-      .reviewer-info {
-        .reviewer-name {
-          font-size: 18px;
-          font-weight: bold;
-          margin: 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
         }
-  
-        .review-date {
-          font-size: 14px;
-          color: #666;
+
+        .reviewer-info {
+            .reviewer-name {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .review-date {
+                font-size: 14px;
+                color: #666;
+            }
         }
-      }
     }
-  
+
     .review-body {
-      .review-text {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-      }
+        .review-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
     }
-  
+
     .review-footer {
-      margin-top: 15px;
-  
-      .rating {
-        font-size: 20px;
-        color: #FFD700; /* Cor dourada para estrelas */
-      }
+        margin-top: 15px;
+
+        .rating {
+            font-size: 20px;
+            color: #FFD700; /* Cor dourada para estrelas */
+        }
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 667px) {
+    .main-section {
+        flex-direction: column;
+        span {
+            font-size: 16px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .benefit-section {
+        flex-direction: column;
+        align-items: center;
+        .benefit-data h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+
     .reviews-container {
-      flex-direction: column; /* Em telas pequenas, os cards ficam um embaixo do outro */
-      align-items: center;
+        flex-direction: column; 
+        align-items: center;
     }
-  }
+
+    .review-card {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+}

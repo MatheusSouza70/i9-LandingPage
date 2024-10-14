@@ -2,10 +2,44 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            p, a {
+                color: #333;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            a {
+                color: #d32f2f; /* Cor do telefone */
+                font-weight: bold;
+            }
+        }
+    }
 
     .socials {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
     }
 }

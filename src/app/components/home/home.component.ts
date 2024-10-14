@@ -4,6 +4,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
 import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.component';
 import { BenefitComponent } from '../benefit/benefit.component';
+import { RouterLink } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
@@ -15,7 +16,8 @@ import { FooterComponent } from '../footer/footer.component';
     BtnPrimaryComponent,
     NewsletterFormComponent,
     BenefitComponent,
-    FooterComponent
+    FooterComponent,
+    RouterLink
   ],
   providers: [],
   templateUrl: './home.component.html',

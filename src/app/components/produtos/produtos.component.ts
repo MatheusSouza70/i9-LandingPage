@@ -3,17 +3,25 @@ import { HeaderComponent } from "../header/header.component";
 import { CommonModule } from '@angular/common';
 import { NgOptimizedImage } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
+// import { Pipe, PipeTransform } from '@angular/core';
+// import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Produto {
   nome: string;
   imagem: string;
-  precoOriginal: number;
-  precoAtual: number;
-  desconto: string;
+  linkVideo: string;
   categoria: string[];
   descricao?: string;
 }
 
+// @Pipe({ name: 'safeUrl' })
+// export class SafeUrlPipe implements PipeTransform {
+//     constructor(private sanitizer: DomSanitizer) {}
+
+//     transform(url: string): SafeResourceUrl {
+//         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+//     }
+// }
 
 @Component({
   selector: 'app-produtos',
@@ -22,41 +30,34 @@ interface Produto {
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.scss'
 })
+
 export class ProdutosComponent {
   produtos: Produto[] = [
     {
       nome: 'AccuDrawer™',
       imagem: '/assets/accudrawer.png',
-      precoOriginal: 2000.0,
-      precoAtual: 1900.0,
-      desconto: '5%',
+      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'drawer'],
       descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.'
     },
     {
       nome: 'AccuCab',
       imagem: '/assets/accucab.png',
-      precoOriginal: 3500.0,
-      precoAtual: 3400.0,
-      desconto: '3%',
+      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'cabinet'],
       descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.'
     },
     {
       nome: 'Express Locker',
       imagem: '/assets/express-locker.png',
-      precoOriginal: 2500.0,
-      precoAtual: 2400.0,
-      desconto: '4%',
+      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'locker', 'express'],
       descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.'
     },
     {
       nome: 'ProLock',
       imagem: '/assets/prolock.png',
-      precoOriginal: 4000.0,
-      precoAtual: 3800.0,
-      desconto: '5%',
+      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'security'],
       descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.'
     }
@@ -85,3 +86,4 @@ fecharModal(): void {
   this.produtoSelecionado = null;
 }
 }
+

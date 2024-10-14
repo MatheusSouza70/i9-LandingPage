@@ -37,12 +37,8 @@
     <div class="products">
       <div *ngFor="let produto of produtosFiltrados" class="product-card">
         <div (click)="abrirModal(produto)">
-          <div class="discount-badge">{{ produto.desconto }} OFF</div>
           <img [src]="produto.imagem" [alt]="produto.nome" width="250" height="250" />
           <h3>{{ produto.nome }}</h3>
-          <p class="price-before">De: {{ produto.precoOriginal | currency }}</p>
-          <p class="price-now">Por: {{ produto.precoAtual | currency }}</p>
-          <button class="buy-button">Comprar</button>
         </div>
       </div>
     </div>
@@ -50,19 +46,21 @@
 
   <div class="modal" *ngIf="produtoSelecionado">
     <div class="modal-content">
-      
-      <h2>{{ produtoSelecionado.nome }}</h2>
-      <img [src]="produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" width="450" height="450" />
-      <div class="produto-descricao">
-        <span class="close" (click)="fecharModal()">&times;</span>
-        <p>{{ produtoSelecionado.descricao }}</p>
-        <div class="produto-preco">
-          <p>Preço Original: {{ produtoSelecionado.precoOriginal | currency }}</p>
-          <p>Preço Atual: {{ produtoSelecionado.precoAtual | currency }}</p>
-          <p>Desconto: {{ produtoSelecionado.desconto }}</p>
+        
+        <h2>{{ produtoSelecionado.nome }}</h2>
+        <img [src]="produtoSelecionado.imagem" alt="{{ produtoSelecionado.nome }}" width="450" height="450" />
+        
+        <div class="produto-descricao">
+            <p>{{ produtoSelecionado.descricao }}</p>
         </div>
-      </div> 
+        
+        <!-- Adicionando o iframe do produto -->
+        <div class="produto-video" *ngIf="produtoSelecionado.linkVideo">
+          <iframe [src]="produtoSelecionado.linkVideo "width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <span class="close" (click)="fecharModal()">&times;</span>
     </div>
   </div>
+
 </section>
 <app-footer></app-footer>
