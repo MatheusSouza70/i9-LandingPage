@@ -3,7 +3,8 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    padding: 10px;
     margin-top: 20px;
 }
 
@@ -22,10 +23,11 @@ main {
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 28px;
         font-weight: 900;
         color: $primary-text;
         text-align: center;
+        line-height: 1.2;
     }
 
     img {
@@ -41,42 +43,67 @@ main {
     justify-content: center;
     gap: 40px;
     padding: 20px;
-
-    .benefit-data {
-        border-bottom: 10px solid $secondary-color;
-        padding-bottom: 20px;
-
-        h2 {
-            font-size: 32px;
-            font-weight: 600;
-            font-family: "Roboto", sans-serif;
-            color: $primary-text;
-            text-align: center;
-        }
-    }
-
-    p {
-        font-size: 18px;
-        font-style: italic;
-        font-weight: 300;
-        text-align: center;
-    }
 }
 
+benefit-card {
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima para telas maiores */
+    padding: 10px;
+}
+
+benefit-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.benefit-data h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    color: $primary-text;
+    text-align: center;
+}
+
+.benefit-data p {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+    .benefit-section {
+        padding: 10px;
+    }
+
+    .benefit-data h2 {
+        font-size: 20px;
+    }
+
+    benefit-card img {
+        width: 15px;
+        height: 15px;
+        border-radius: 8px;
+    }
+
+    .benefit-data p {
+        font-size: 14px;
+    }
+}
 .cta-section {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    padding: 10px;
 
     h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 20px;
         color: $primary-text;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 
@@ -96,11 +123,11 @@ main {
         align-items: flex-start;
 
         .benefit-data h2 {
-            font-size: 40px;
+            font-size: 15px;
         }
 
         p {
-            font-size: 22px;
+            font-size: 12px;
         }
     }
 
@@ -118,37 +145,37 @@ main {
 }
 
 .review-card {
-    flex: 1 1 300px;
+    width: 100%;
+    max-width: 300px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 100%;
+    padding: 15px;
     font-family: Arial, sans-serif;
-    margin: 10px;
 
     .review-header {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
 
         .profile-picture {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            margin-right: 10px;
             object-fit: cover;
-            margin-right: 15px;
+            
         }
 
         .reviewer-info {
             .reviewer-name {
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: bold;
                 margin: 0;
             }
 
             .review-date {
-                font-size: 14px;
+                font-size: 12px;
                 color: #666;
             }
         }
@@ -156,18 +183,18 @@ main {
 
     .review-body {
         .review-text {
-            font-size: 16px;
-            line-height: 1.5;
+            font-size: 14px;
+            line-height: 1.4;
             color: #333;
         }
     }
 
     .review-footer {
-        margin-top: 15px;
+        margin-top: 10px;
 
         .rating {
-            font-size: 20px;
-            color: #FFD700; /* Cor dourada para estrelas */
+            font-size: 18px;
+            color: #FFD700;
         }
     }
 }
@@ -175,6 +202,7 @@ main {
 @media (max-width: 667px) {
     .main-section {
         flex-direction: column;
+        font-size: 36px;
         span {
             font-size: 16px;
         }
@@ -202,5 +230,9 @@ main {
     .review-card {
         flex: 1 1 100%;
         max-width: 90%;
+    }
+
+    .cta-section h2 {
+        font-size: 24px;
     }
 }

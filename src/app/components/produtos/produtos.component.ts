@@ -12,6 +12,7 @@ interface Produto {
   linkVideo: string;
   categoria: string[];
   descricao?: string;
+  linkvideo: string;
 }
 
 // @Pipe({ name: 'safeUrl' })
@@ -38,28 +39,32 @@ export class ProdutosComponent {
       imagem: '/assets/accudrawer.png',
       linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'drawer'],
-      descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.'
+      descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.',
+      linkvideo: 'https://youtu.be/tL-33_zmJso?si=17lOimAJtA_eHQQ3'
     },
     {
       nome: 'AccuCab',
       imagem: '/assets/accucab.png',
       linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'cabinet'],
-      descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.'
+      descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.',
+      linkvideo: 'https://youtu.be/kmuqMNQ5Vx0?si=kVYuj-Iu5o8Zo44v'
     },
     {
       nome: 'Express Locker',
       imagem: '/assets/express-locker.png',
       linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'locker', 'express'],
-      descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.'
+      descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.',
+      linkvideo: ""
     },
     {
       nome: 'ProLock',
       imagem: '/assets/prolock.png',
       linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'security'],
-      descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.'
+      descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.',
+      linkvideo: 'https://youtu.be/nVD7h76RWfs?si=XqetRgMjYUzoGpKY'
     }
   ];
   produtosFiltrados: Produto[] = [...this.produtos];

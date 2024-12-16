@@ -1,28 +1,36 @@
 footer {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
     background-color: #ffffff;
+    flex-wrap: wrap;
 
     .footer-info {
         display: flex;
         align-items: center;
         gap: 20px;
+        flex: 1 1 auto;
+        img {
+            max-width: 100%; 
+            height: auto; 
+        }
 
         .contact-details {
             display: flex;
             flex-direction: column;
             gap: 5px;
 
-            p, a {
+            p,
+            a {
                 color: #333;
                 font-size: 14px;
                 text-decoration: none;
             }
 
             a {
-                color: #d32f2f; /* Cor do telefone */
+                color: #d32f2f; 
                 font-weight: bold;
             }
         }
@@ -32,6 +40,8 @@ footer {
         display: flex;
         align-items: center;
         gap: 15px;
+        flex: 1 1 auto; 
+        justify-content: flex-end; 
 
         a {
             display: inline-block;
@@ -41,5 +51,23 @@ footer {
             width: 40px;
             height: 40px;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .footer-info {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .socials {
+        margin-top: 15px;
+        justify-content: center;
     }
 }
