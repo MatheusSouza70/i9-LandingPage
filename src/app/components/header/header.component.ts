@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   imports: [
-    NgOptimizedImage,
     RouterOutlet,
     RouterLink
   ],
@@ -18,7 +17,9 @@ export class HeaderComponent {
   isMenuOpen = false;
 
   toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
+    this.isMenuOpen = !this.isMenuOpen;
+    const hamburger = document.querySelector('.hamburger');
+    hamburger?.classList.toggle('active');
   }
-  
+
 }

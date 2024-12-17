@@ -4,10 +4,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background-color: #fff;
     position: relative;
-    
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    button {
+        text-decoration: none !important;
+    }
+
+    .logo-menu {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 
     .center-content {
         display: flex;
@@ -18,11 +28,19 @@
         gap: 10px;
         font-size: 16px;
         font-weight: bold;
-    }
 
-    .logo-menu{
-        background: none;
-        border: none;
+        span {
+            color: $primary-text;
+        }
+
+        a img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover img {
+            transform: scale(1.05);
+        }
     }
 
     .hamburger {
@@ -32,6 +50,33 @@
         font-size: 24px;
         cursor: pointer;
         color: $primary-text;
+        position: relative;
+        z-index: 10;
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin: 6px auto;
+            background-color: $primary-text;
+            transition: 0.4s;
+        }
+
+        &.active .bar1 {
+            transform: rotate(45deg);
+            position: absolute;
+            top: 10px;
+        }
+
+        &.active .bar2 {
+            opacity: 0;
+        }
+
+        &.active .bar3 {
+            transform: rotate(-45deg);
+            position: absolute;
+            top: -10px;
+        }
 
         &:hover {
             color: $secondary-color;
@@ -40,7 +85,7 @@
 
     .navigation {
         display: flex;
-        gap: 20px;
+        gap: 25px;
         flex: 1;
         justify-content: flex-end;
 
@@ -52,10 +97,12 @@
             font-size: 16px;
             font-weight: bold;
             text-decoration: underline;
-        }
+            transition: color 0.3s ease, transform 0.3s ease;
 
-        &:hover {
-            color: $secondary-color;
+            &:hover {
+                color: $secondary-color;
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -77,9 +124,10 @@
             background-color: #fff;
             width: 100%;
             display: none;
-            gap: 10px;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-top: 2px solid #eee;
 
             &.active {
                 display: flex;
@@ -88,6 +136,7 @@
             button {
                 text-align: left;
                 width: 100%;
+                padding: 10px 0;
             }
         }
     }

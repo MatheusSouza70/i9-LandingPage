@@ -11,10 +11,9 @@ import { FooterComponent } from '../footer/footer.component';
   selector: 'app-home',
   standalone: true,
   imports: [
-    HeaderComponent, 
-    NgOptimizedImage, 
+    HeaderComponent,
+    NgOptimizedImage,
     BtnPrimaryComponent,
-    NewsletterFormComponent,
     BenefitComponent,
     FooterComponent,
     RouterLink

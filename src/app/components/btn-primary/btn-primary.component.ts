@@ -20,7 +20,7 @@ export class BtnPrimaryComponent {
 
   @Output("submit") onSubmit = new EventEmitter();
 
-  submit(){
+  submit() {
     this.onSubmit.emit();
   }
 }

@@ -10,8 +10,8 @@ describe('SobreComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SobreComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(SobreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

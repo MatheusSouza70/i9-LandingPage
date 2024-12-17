@@ -27,7 +27,7 @@ interface Produto {
 @Component({
   selector: 'app-produtos',
   standalone: true,
-  imports: [HeaderComponent, CommonModule,FooterComponent, NgOptimizedImage],
+  imports: [HeaderComponent, CommonModule, FooterComponent],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.scss'
 })
@@ -37,7 +37,7 @@ export class ProdutosComponent {
     {
       nome: 'AccuDrawer™',
       imagem: '/assets/accudrawer.png',
-      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'drawer'],
       descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.',
       linkvideo: 'https://youtu.be/tL-33_zmJso?si=17lOimAJtA_eHQQ3'
@@ -45,7 +45,7 @@ export class ProdutosComponent {
     {
       nome: 'AccuCab',
       imagem: '/assets/accucab.png',
-      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'cabinet'],
       descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.',
       linkvideo: 'https://youtu.be/kmuqMNQ5Vx0?si=kVYuj-Iu5o8Zo44v'
@@ -53,7 +53,7 @@ export class ProdutosComponent {
     {
       nome: 'Express Locker',
       imagem: '/assets/express-locker.png',
-      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'locker', 'express'],
       descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.',
       linkvideo: ""
@@ -61,7 +61,7 @@ export class ProdutosComponent {
     {
       nome: 'ProLock',
       imagem: '/assets/prolock.png',
-      linkVideo:'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
       categoria: ['hardware', 'security'],
       descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.',
       linkvideo: 'https://youtu.be/nVD7h76RWfs?si=XqetRgMjYUzoGpKY'
@@ -83,12 +83,12 @@ export class ProdutosComponent {
 
   produtoSelecionado: Produto | null = null;
 
-abrirModal(produto: Produto): void {
-  this.produtoSelecionado = produto;
-}
+  abrirModal(produto: Produto): void {
+    this.produtoSelecionado = produto;
+  }
 
-fecharModal(): void {
-  this.produtoSelecionado = null;
-}
+  fecharModal(): void {
+    this.produtoSelecionado = null;
+  }
 }
 

@@ -4,29 +4,34 @@
     margin: 0 auto;
     padding: 20px;
 
-    .title {
-      text-align: center;
-
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 1.4rem;
-        font-weight: bold;
-      }
+    .title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
+
+    .title h2:hover {
+      transform: scale(1.1);
+      color: #e63946;
+      /* Cor de destaque */
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+
 
     .content {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 20px;
-      flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+      flex-wrap: wrap;
+      /* Permite que os elementos se ajustem em telas menores */
 
       .descricao {
         flex: 2;
+
         p {
           font-size: 1.2rem;
           line-height: 1.6;
@@ -40,8 +45,10 @@
         margin-left: 20px;
         display: flex;
         align-items: center;
-        margin-top: 20px; /* Ajuste para telas menores */
-        width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
+        margin-top: 20px;
+        /* Ajuste para telas menores */
+        width: 100%;
+        /* Garante que a imagem ocupe 100% da largura disponível */
 
         .texto-sobre-imagem {
           position: absolute;
@@ -61,6 +68,7 @@
           from {
             font-size: 1.5rem;
           }
+
           to {
             font-size: 1rem;
           }
@@ -76,6 +84,8 @@
   }
 }
 
+
+
 .page-gestao-epi {
   max-width: 1200px;
   margin: 0 auto;
@@ -86,21 +96,25 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Ajuste responsivo */
+    flex-wrap: wrap;
+    /* Ajuste responsivo */
 
     .gestao-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex: 1;
-      flex-wrap: wrap; /* Permite que as colunas se ajustem em telas menores */
+      flex-wrap: wrap;
+      /* Permite que as colunas se ajustem em telas menores */
 
       .descricao-gestao {
         flex: 2;
+
         h3 {
           font-size: 2rem;
           margin-bottom: 10px;
         }
+
         p {
           font-size: 1.2rem;
           line-height: 1.6;
@@ -111,6 +125,7 @@
       .image-gestao {
         flex: 1;
         margin-left: 20px;
+
         img {
           width: 100%;
           height: auto;
@@ -133,11 +148,13 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap; /* Permite ajuste das imagens em telas menores */
+      flex-wrap: wrap;
+      /* Permite ajuste das imagens em telas menores */
 
       .produto {
         text-align: center;
-        width: 150px; /* Define um tamanho fixo para os produtos */
+        width: 150px;
+        /* Define um tamanho fixo para os produtos */
         margin-bottom: 20px;
 
         img {
@@ -169,7 +186,8 @@
 }
 
 .diferencial {
-  background-color: #ffffff; /* Cor de fundo do card */
+  background-color: #ffffff;
+  /* Cor de fundo do card */
   padding: 20px;
   border-radius: 8px;
   margin-top: 30px;
@@ -185,28 +203,51 @@
     line-height: 1.5;
     margin-bottom: 20px;
   }
+}
 
-  .btn-auvo {
-    background-color: #e63946; /* Cor do botão */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+.btn-auvo {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s ease;
 
-    &:hover {
-      background-color: #d62839; /* Cor do botão ao passar o mouse */
-    }
+  &:hover {
+    background-color: #d62839;
+    transform: translateY(-3px);
+    /* Efeito de elevação */
   }
 }
 
+.header-solucoes .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.page-solucoes .content {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.page-gestao-epi .gestao-content {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 @media (max-width: 768px) {
-  .header-solucoes .content, .gestao-epi .gestao-content {
+
+  .header-solucoes .content,
+  .gestao-epi .gestao-content {
     flex-direction: column;
     align-items: center;
-    .descricao, .descricao-gestao, .image-wrapper, .image-gestao {
+
+    .descricao,
+    .descricao-gestao,
+    .image-wrapper,
+    .image-gestao {
       flex: none;
       width: 100%;
       margin-left: 0;
@@ -215,19 +256,36 @@
 
   .produtos-envolvidos .produtos .produto {
     flex: 1 1 100%;
-    max-width: 100px; /* Ajuste no tamanho máximo dos produtos */
+    max-width: 100px;
+    /* Ajuste no tamanho máximo dos produtos */
   }
 
   .diferencial {
     padding: 15px;
+
     h4 {
       font-size: 1.6rem;
     }
+
     p {
       font-size: 1.1rem;
     }
+
     .btn-auvo {
       font-size: 0.9rem;
     }
+  }
+
+  .page-gestao-epi .gestao-epi .image-gestao {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+  }
+
+  .image-wrapper {
+    display: flex;
+    width: auto;
+    height: auto;
   }
 }

@@ -1,12 +1,20 @@
 <header class="app-header">
     <div class="logo">
-        <button class="logo-menu" routerLink=""><img src="./assets/logo.png" width="45" height="75" alt="Logo"></button>
+        <button class="logo-menu" routerLink="">
+            <img src="./assets/logo.png" width="45" height="75" alt="Logo">
+        </button>
     </div>
     <div class="center-content">
         <span>Parceira Exclusiva da</span>
-        <img src="./assets/cribmaster-logo.png" width="150" height="50" alt="CribMaster Logo">
+        <a href="https://storage.stanleyblackanddecker.com/cribmaster" target="_blank">
+            <img src="./assets/cribmaster-logo.png" width="150" height="50" alt="CribMaster Logo">
+        </a>
     </div>
-    <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
+    <button class="hamburger" (click)="toggleMenu()">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+    </button>
     <nav class="navigation" [class.active]="isMenuOpen">
         <button routerLink="/treinamentos">Treinamentos</button>
         <button routerLink="/solucoes">Soluções</button>

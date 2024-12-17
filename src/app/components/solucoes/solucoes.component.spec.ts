@@ -10,8 +10,8 @@ describe('SolucoesComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SolucoesComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(SolucoesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +21,4 @@ describe('SolucoesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

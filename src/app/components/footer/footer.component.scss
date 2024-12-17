@@ -12,9 +12,10 @@ footer {
         align-items: center;
         gap: 20px;
         flex: 1 1 auto;
+
         img {
-            max-width: 100%; 
-            height: auto; 
+            max-width: 100%;
+            height: auto;
         }
 
         .contact-details {
@@ -30,7 +31,7 @@ footer {
             }
 
             a {
-                color: #d32f2f; 
+                color: #d32f2f;
                 font-weight: bold;
             }
         }
@@ -40,8 +41,8 @@ footer {
         display: flex;
         align-items: center;
         gap: 15px;
-        flex: 1 1 auto; 
-        justify-content: flex-end; 
+        flex: 1 1 auto;
+        justify-content: flex-end;
 
         a {
             display: inline-block;
@@ -56,14 +57,14 @@ footer {
 
 @media (max-width: 768px) {
     footer {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-info {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 15px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .socials {

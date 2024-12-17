@@ -10,8 +10,8 @@ describe('BenefitComponent', () => {
     await TestBed.configureTestingModule({
       imports: [BenefitComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(BenefitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

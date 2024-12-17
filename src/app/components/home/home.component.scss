@@ -47,14 +47,38 @@ main {
 
 benefit-card {
     width: 100%;
-    max-width: 600px; /* Limita a largura máxima para telas maiores */
-    padding: 10px;
-}
+    max-width: 450px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    /* Adicionando borda para separar os cards */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 
-benefit-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    &:hover {
+        transform: scale(1.05);
+        /* Adicionando efeito de hover */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: $primary-text;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+    }
 }
 
 .benefit-data h2 {
@@ -91,28 +115,43 @@ benefit-card img {
         font-size: 14px;
     }
 }
+
 .cta-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 40px 20px;
+    background-color: #f1f1f1;
 
     h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 36px;
         color: $primary-text;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    btn-primary {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        background-color: transparent;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
     }
 }
 
 @media (min-width: 667px) {
     .main-section {
         flex-direction: row;
+
         span {
             font-size: 20px;
         }
+
         h1 {
             font-size: 48px;
         }
@@ -139,9 +178,9 @@ benefit-card img {
 .reviews-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
-    padding: 20px;
     justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .review-card {
@@ -164,7 +203,6 @@ benefit-card img {
             border-radius: 50%;
             margin-right: 10px;
             object-fit: cover;
-            
         }
 
         .reviewer-info {
@@ -200,30 +238,36 @@ benefit-card img {
 }
 
 @media (max-width: 667px) {
+
     .main-section {
         flex-direction: column;
         font-size: 36px;
+
         span {
             font-size: 16px;
         }
+
         h1 {
             font-size: 36px;
         }
+
     }
 
     .benefit-section {
         flex-direction: column;
         align-items: center;
+
         .benefit-data h2 {
             font-size: 32px;
         }
+
         p {
             font-size: 18px;
         }
     }
 
     .reviews-container {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 

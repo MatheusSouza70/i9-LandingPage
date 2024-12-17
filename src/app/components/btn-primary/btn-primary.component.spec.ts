@@ -10,8 +10,8 @@ describe('BtnPrimaryComponent', () => {
     await TestBed.configureTestingModule({
       imports: [BtnPrimaryComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(BtnPrimaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
