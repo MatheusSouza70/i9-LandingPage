@@ -8,13 +8,14 @@
       <li (click)="filtrarProdutos('drawer')">Drawer</li>
       <li (click)="filtrarProdutos('cabinet')">Cab</li>
 
-
       <li class="category-title">Express</li>
-      <li (click)="filtrarProdutos('express-toolbox')">Toolbox</li>
+      <li (click)="filtrarProdutos('express-toolbox')"> Express Toolbox</li>
       <li (click)="filtrarProdutos('locker')">Locker</li>
-
+      
       <li class="category-title">Outros</li>
-      <li (click)="filtrarProdutos('security')">ProLock</li>
+      <li (click)="filtrarProdutos('lock')">ProLock</li>
+      <li (click)="filtrarProdutos('toolbox')"> Toolbox</li>
+      <li (click)="filtrarProdutos('pou')">POU</li>
 
     </ul>
   </aside>
@@ -26,8 +27,6 @@
       <p>{{ produtosFiltrados.length }} Produtos</p>
       <div>
         <button (click)="filtrarProdutos('all')">Todos</button>
-        <button (click)="filtrarProdutos('drawer')">Drawer</button>
-        <button (click)="filtrarProdutos('security')">Locker</button>
       </div>
     </header>
 
@@ -49,7 +48,8 @@
 
       <div class="produto-descricao">
         <p>{{ produtoSelecionado.descricao }}</p>
-        <button><a href="{{produtoSelecionado.linkvideo}}" target="_blank">VEJA O VÍDEO!</a></button>
+        <button class="btn-product"><a href="{{produtoSelecionado.vejamais}}" target="_blank">Saiba mais</a></button>
+        <button class="btn-product"><a href="{{produtoSelecionado.linkvideo}}" target="_blank">VEJA O VÍDEO!</a></button>
       </div>
 
       <span class="close" (click)="fecharModal()">&times;</span>

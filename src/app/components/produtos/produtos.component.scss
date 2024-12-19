@@ -1,5 +1,9 @@
 @import "../../../color-variables.scss";
 
+* {
+  text-decoration: none !important;
+}
+
 .produtos-page {
   display: flex;
   flex-direction: row;
@@ -190,6 +194,11 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .modal-content img {
+      width: 70%;
+      height: 70%;
+    }
   }
 
   .modal {
@@ -225,4 +234,24 @@
     font-size: 24px;
     cursor: pointer;
   }
+
+  .btn-product {
+    background-color: #e63946;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 12px;
+    transition: background-color 0.3s, transform 0.3s ease;
+
+    &:hover {
+      background-color: #d62839;
+      transform: translateY(-3px);
+      /* Efeito de elevação */
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
 }

@@ -9,7 +9,7 @@ import { FooterComponent } from '../footer/footer.component';
 interface Produto {
   nome: string;
   imagem: string;
-  linkVideo: string;
+  vejamais: string;
   categoria: string[];
   descricao?: string;
   linkvideo: string;
@@ -35,37 +35,61 @@ interface Produto {
 export class ProdutosComponent {
   produtos: Produto[] = [
     {
-      nome: 'AccuDrawer™',
+      nome: 'AccuDrawer',
       imagem: '/assets/accudrawer.png',
-      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      vejamais: 'https://storage.stanleyblackanddecker.com/accudrawer---drawersystems-accudrawer--cp-l3-2720/p',
       categoria: ['hardware', 'drawer'],
-      descricao: 'Uma gaveta inteligente para controle de ferramentas e inventário.',
+      descricao: 'O AccuDrawer é um sistema de controle de ferramentas de última geração que aproveita o poder da tecnologia RFID para monitoramento e rastreamento inigualáveis ​​de suas ferramentas armazenadas.',
       linkvideo: 'https://youtu.be/tL-33_zmJso?si=17lOimAJtA_eHQQ3'
     },
     {
       nome: 'AccuCab',
       imagem: '/assets/accucab.png',
-      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      vejamais: 'https://storage.stanleyblackanddecker.com/accucab---doorsystems-accucab--cp-l3-2732/p',
       categoria: ['hardware', 'cabinet'],
-      descricao: 'Um armário inteligente para armazenar e monitorar o uso de itens.',
+      descricao: 'O AccuCab é uma solução automatizada de gerenciamento de ferramentas que aproveita o poder da tecnologia RFID e do software CribMaster para monitorar e rastrear com eficiência suas ferramentas etiquetadas com RFID. Com visibilidade em tempo real do seu inventário de ferramentas, o AccuCab permite o gerenciamento proativo e reduz o risco de extravio. Os principais recursos incluem:',
       linkvideo: 'https://youtu.be/kmuqMNQ5Vx0?si=kVYuj-Iu5o8Zo44v'
     },
     {
       nome: 'Express Locker',
       imagem: '/assets/express-locker.png',
-      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
+      vejamais: 'https://storage.stanleyblackanddecker.com/express-locker---lockersystems-express-locker--cp-l3-2722/p',
       categoria: ['hardware', 'locker', 'express'],
-      descricao: 'Sistema de armazenamento seguro com acesso rápido para itens expressos.',
-      linkvideo: ""
+      descricao: 'O Express Locker é uma solução de armazenamento segura e eficiente projetada para complementar o Express Toolbox. Esta unidade auxiliar otimiza o gerenciamento de itens de inventário consumíveis e duráveis, garantindo que suas ferramentas e suprimentos estejam sempre organizados e facilmente acessíveis.',
+      linkvideo: "https://youtu.be/cp-kOODyBJI?si=0RxHNQz8oPDKaq7D"
     },
     {
       nome: 'ProLock',
       imagem: '/assets/prolock.png',
-      linkVideo: 'https://youtu.be/E4KV5tbpK1w?si=NfDOWvTuF9qzmu73',
-      categoria: ['hardware', 'security'],
-      descricao: 'Cofre inteligente para máxima segurança e rastreamento de inventário.',
+      vejamais: 'https://storage.stanleyblackanddecker.com/prolock---lockersystems-prolock--cp-l3-2710/p',
+      categoria: ['hardware', 'security', 'lock'],
+      descricao: 'O ProLock é uma solução de armário altamente segura e personalizável para armazenar e gerenciar com eficiência suas ferramentas e consumíveis valiosos. Os principais recursos incluem:',
       linkvideo: 'https://youtu.be/nVD7h76RWfs?si=XqetRgMjYUzoGpKY'
-    }
+    },
+    {
+      nome: 'Express ToolBox',
+      imagem: '/assets/expresstoolbox.png',
+      vejamais: 'https://storage.stanleyblackanddecker.com/express-toolbox---coilsystems-express-toolbox--cp-l3-2711/p',
+      categoria: ['hardware', 'security', 'express', 'express-toolbox'],
+      descricao: 'Dispensa Segura de Ponto de Uso. Este dispositivo de alta segurança gerencia e controla consumíveis, ao mesmo tempo em que reduz custos, aumenta a produtividade e reduz o desperdício.',
+      linkvideo: 'https://youtu.be/Ab-A8MAjo1Q?si=XTB6NoueiEcO4bT7'
+    },
+    {
+      nome: 'ToolBox',
+      imagem: '/assets/toolbox.png',
+      vejamais: 'https://storage.stanleyblackanddecker.com/toolbox---coilsystems-toolbox--cp-l3-2738/p',
+      categoria: ['hardware', 'security', 'toolbox'],
+      descricao: 'O ToolBox é sua solução para dispensação segura no ponto de uso de ferramentas de corte, MRO, EPI e consumíveis. Com recursos de alta segurança, visibilidade aprimorada do produto e opções flexíveis de dispensação para itens individuais ou em kit, o ToolBox simplifica suas operações.',
+      linkvideo: 'https://youtu.be/Ab-A8MAjo1Q?si=XTB6NoueiEcO4bT7'
+    },
+    {
+      nome: 'POU',
+      imagem: '/assets/pou.png',
+      vejamais: 'https://storage.stanleyblackanddecker.com/pou---kiosksystems-pou--cp-l3-2735/p',
+      categoria: ['hardware', 'pou'],
+      descricao: 'O computador de mesa portátil e o scanner transformam qualquer espaço em uma estação de trabalho, permitindo que você gerencie seu inventário mais perto do depósito de ferramentas.',
+      linkvideo: 'https://youtu.be/E4KV5tbpK1w?si=9MW_ySQttzvp6wkm'
+    },
   ];
   produtosFiltrados: Produto[] = [...this.produtos];
 
