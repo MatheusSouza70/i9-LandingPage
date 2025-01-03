@@ -1,5 +1,9 @@
 @import "../../../color-variables.scss";
 
+* {
+    text-align: justify;
+}
+
 main {
     display: flex;
     flex-direction: column;
